@@ -13,7 +13,7 @@
             self::$productsArray = $data["products"];
             self::$categories = $data["categories"];
 
-            //Filter by category and amount of products to show
+            //Get querry string data to filter by category and amount of products to show
             $filterCategory = self::getCategory(); 
             $show = self::showAmountOfProducts(); 
             
@@ -56,7 +56,6 @@
         }
         
         //getting amount of products to show,
-        //returns integer
         private static function showAmountOfProducts(){
             isset($_GET["show"])? $show = $_GET["show"] : $show=20; 
             self::validator("show", $show);
@@ -64,7 +63,6 @@
         }
 
         //Filter categories
-        //Returns a string
         private static function getCategory(){
             isset($_GET["category"])?$category = $_GET["category"]: $category = null;
             self::validator("category" ,$category);

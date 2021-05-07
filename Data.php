@@ -173,9 +173,6 @@
                 'jewelery',
                 'men clothing',
                 'electronics'
-               
             ]
         ]
-               
-
 ?>
